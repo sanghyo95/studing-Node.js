@@ -8,7 +8,7 @@ var crypto = require('crypto');
 var key = "아무도 읽지 못하는 나만의 비밀 키";
 var input = 'PASSWORD';
 
-var cipher = crypto.createCipher('aes-256-cbc,key');
+var cipher = crypto.createCipher('aes-256-cbc',key);
 cipher.update(input,'utf8','base64');
 var cipheredOutput = cipher.final('base64');
 
